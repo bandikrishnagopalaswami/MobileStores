@@ -1,0 +1,145 @@
+body{
+  background-color: rgba(54, 96, 234, 0.3);
+  font-family: montserrat;
+}
+
+header{
+  margin-top:15px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius:6px;
+  padding:15px;
+  font-family:montserrat,'Times New Roman', Times, serif;
+  background-color: rgb(215, 235, 81);
+}
+.title,.home,.cart{
+  color: brown;
+  margin:0px;
+  display: inline-block; 
+}
+.home{
+  margin-left: 950px;
+}
+.cart{
+  margin-left:30px;
+}
+.items{
+  display: grid;
+  grid-template-columns:250px 250px 250px 250px 250px;
+  column-gap: 50px;
+  margin-left:30px;
+}
+.item-specification1,.item-specification2,.item-specification3,.item-specification4,.item-specification5{
+  transition: padding 0.20s;
+  padding:30px 0px 10px 0px;
+  width:100%;
+  border-style:solid;
+  border-radius: 15px;
+  border-width: 1px;
+}
+img{
+  height: 200px;
+  margin-left: 60px;
+  border-radius:10px;
+}
+.img1{
+  width:50%;
+}
+.add-to-cart{
+  margin-left:25px;
+  margin-top: 20px;
+  font-size:15px;
+  background-color: rgb(238, 238, 18);
+  padding:7px 70px 7px 70px;
+  border-radius: 20px;
+  border-width:1px;
+}
+body{
+  padding-bottom: 100px;
+}
+
+.img2{
+  margin-left: 50px;
+  width:58%;
+}
+.img3{
+  margin-left: 40px;
+  width:70%;
+}
+.img4{
+  margin-left: 25px;
+  width:80%;
+}
+.img5{
+  margin-left: 75px;
+}
+.item4-para{
+  margin-left: 45px;
+}
+p{
+  margin:0px;
+  margin-top: 5px;
+  margin-left: 65px;
+}
+.add-to-cart:hover{
+  opacity: 0.8;
+}
+.add-to-cart:active{
+  opacity: 0.5;
+}
+.item-specification1:hover,.item-specification2:hover,.item-specification3:hover,.item-specification4:hover,.item-specification5:hover{
+padding:35px 5px 10px 5px;
+}
+.mobile-company{
+  color: brown;
+}
+.img10{
+  margin-left: 10px;
+}
+.img6{
+  width:65%;
+  margin-left:40px;
+}
+.img7{
+  margin-left:40px;
+  width:65%;
+}
+.img8{
+  margin-left:20px;
+  width:85%;
+}
+.img9{
+  width:70%;
+  margin-left: 35px;
+}
+.img10{
+  width:80%;
+}
+.item-9-title{
+  margin-left:60px;
+}
+.cart-heading{
+  color:brown;
+}
+.total-price{
+  margin-top:50px;
+  color:brown;
+}
+.remove-from-cart{
+  background-color: red;
+  color:white;
+  border-width:1px;
+  margin-left: 40px;
+  font-size:15px;
+  padding:10px 30px 10px 25px;
+  margin-top:10px;
+  border-radius: 5px;
+  transition: opacity 0.25s;
+  display: none;
+}
+.remove-from-cart:hover{
+  opacity:0.8;
+}
+.remove-from-cart:active{
+  opacity:0.5;
+}

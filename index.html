@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">MOBILE STORE</h1>
+        <h1 class="home">HOME</h1>
+        <h1 class="cart">CART</h1>
+    </header>
+    <div>
+        <h1 class="mobile-company">APPLE MOBILES</h1>
+        <div class="items">
+            <div class="item-specification1">
+                <img class="img1" src="1.jpg">
+                <p>Apple 15 pro</p>
+                <p>price:45000/-</p>
+                <button class="add-to-cart" onclick="add_to_cart(1)">Add to cart</button>
+                <button class="remove-from-cart" onclick="remove_from_cart(1)">Remove from cart</button>
+            </div>
+            <div class="item-specification2">
+                <img class="img2" src="2.jpg">
+                <p>Apple 14 pro</p>
+                <p>price:35000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(2)">Add to cart</button> 
+                <button class="remove-from-cart" onclick="remove_from_cart(2)">Remove from cart</button>           
+            </div>
+            <div class="item-specification3">
+                <img class="img3" src="3.jpg">
+                <p class="item-para">Apple 13 pro</p>
+                <p>price:50000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(3)">Add to cart</button> 
+                <button class="remove-from-cart" onclick="remove_from_cart(3)">Remove from cart</button>           
+            </div>
+            <div class="item-specification4">
+                <img class="img4" src="4.jpg">
+                <p class="item4-para">Apple 15 pro max</p>
+                <p>price:48000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(4)">Add to cart</button>  
+                <button class="remove-from-cart" onclick="remove_from_cart(4)">Remove from cart</button>          
+            </div>
+            <div class="item-specification5">
+                <img class="img5" src="5.jpg">
+                <p>Apple 15 plus</p>
+                <p>price:55000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(5)">Add to cart</button>  
+                <button class="remove-from-cart" onclick="remove_from_cart(5)">Remove from cart</button>          
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="mobile-company">MOTOROLA MOBILES</h1>
+        <div class="items">
+            <div class="item-specification1">
+                <img class="img6" src="6.jpg">
+                <p>Moto G72</p>
+                <p>price:15000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(6)">Add to cart</button>
+                <button class="remove-from-cart" onclick="remove_from_cart(6)">Remove from cart</button>
+            </div>
+            <div class="item-specification2">
+                <img class="img7" src="7.jpg">
+                <p>Moto g62</p>
+                <p>price:16000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(7)">Add to cart</button> 
+                <button class="remove-from-cart" onclick="remove_from_cart(7)">Remove from cart</button>           
+            </div>
+            <div class="item-specification3">
+                <img class="img8" src="8.png">
+                <p class="item-para">Moto Edge 30</p>
+                <p>price:20000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(8)">Add to cart</button> 
+                <button class="remove-from-cart" onclick="remove_from_cart(8)">Remove from cart</button>           
+            </div>
+            <div class="item-specification4">
+                <img class="img9" src="9.jpg">
+                <p class="item-9-title">Moto g52</p>
+                <p>price:18000/-</p>
+                <button class="add-to-cart"  onclick="add_to_cart(9)">Add to cart</button>     
+                <button class="remove-from-cart" onclick="remove_from_cart(9)">Remove from cart</button>       
+            </div>
+            <div class="item-specification5">
+                <img class="img10" src="10.png">
+                <p>Moto g82</p>
+                <p>price:25000/-</p>
+                <button class="add-to-cart" onclick="add_to_cart(10)">Add to cart</button> 
+                <button class="remove-from-cart" onclick="remove_from_cart(10)">Remove from cart</button>           
+            </div>
+        </div>
+    </div>
+    <h1 class="cart-heading">CART</h1>
+    <div class="product-cart">
+    </div>
+    <p class="total-price"></p>
+</body>
+<script>
+let product_photos=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.png','9.jpg','10.png',];
+let product_prices=[45000,35000,50000,48000,55000,15000,16000,20000,18000,25000];
+let model=['Apple 15 pro','Apple 14 pro','Apple 13 pro','Apple 15 pro max','Apple 15 plus','Moto g72','Moto g62','Moto Edge 30','Moto g52','Moto g82'];
+let cart=[];
+let res=``;
+let total=0;
+let remove_button_display=[0,0,0,0,0,0,0,0,0,0];
+function add_to_cart(c){
+    let cart_update=document.querySelector(".product-cart");
+    let remove_button=document.querySelectorAll(".remove-from-cart");
+    for(let i=0;i<remove_button.length;i++){
+        if(c-1==i){
+            remove_button[i].style.display='block';
+        }
+    }
+   remove_button_display[c-1]++;
+    cart.push(c-1);
+    res=``;
+    total=0;
+    for(let i=0;i<cart.length;i++){
+        res+=`<img src="${product_photos[cart[i]]}">`;
+        total+=product_prices[cart[i]];
+    }
+    console.log(remove_button);
+    cart_update.innerHTML=res;
+    console.log(total);
+    let bill=document.querySelector(".total-price");
+    bill.innerHTML=`Total:${total}`;
+}
+function remove_from_cart(c){
+    let cart_update=document.querySelector(".product-cart");
+    let remove_button=document.querySelectorAll(".remove-from-cart");
+    console.log(remove_button);
+    remove_button_display[c-1]--;
+    if(remove_button_display[c-1]==0){
+        remove_button[c-1].style.display='none';
+    }
+    total-=product_prices[c-1];
+    cart.pop();
+    res=``;
+    for(let i=0;i<cart.length;i++){
+        res+=`<img src="${product_photos[cart[i]]}">`;
+        //total-=product_prices[cart[i]];
+    }
+    cart_update.innerHTML=res;
+    let bill=document.querySelector(".total-price");
+    bill.innerHTML=`Total:${total}`;
+}
+</script>
+</html>
