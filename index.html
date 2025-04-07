@@ -143,7 +143,6 @@ function remove_from_cart(c){
     res=``;
     for(let i=0;i<cart.length;i++){
         res+=`<img src="${product_photos[cart[i]]}">`;
-        //total-=product_prices[cart[i]];
     }
     cart_update.innerHTML=res;
     let bill=document.querySelector(".total-price");

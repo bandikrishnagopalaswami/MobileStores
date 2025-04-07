@@ -25,12 +25,12 @@ header{
 }
 .items{
   display: grid;
-  grid-template-columns:250px 250px 250px 250px 250px;
-  column-gap: 50px;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
   margin-left:30px;
+  column-gap: 30px;
 }
 .item-specification1,.item-specification2,.item-specification3,.item-specification4,.item-specification5{
-  transition: padding 0.20s;
+  transition: padding 0.30s;
   padding:30px 0px 10px 0px;
   width:100%;
   border-style:solid;
