@@ -8,12 +8,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap" rel="stylesheet">
+<style>
+header{
+  display: flex;
+  margin-top:15px;
+  border-style: solid;
+  border-width: 1px;
+  color:brown;
+  padding:10px 5px 10x 0px;
+  border-radius:6px;
+  font-family:montserrat,'Times New Roman', Times, serif;
+  background-color: rgb(215, 235, 81);
+  justify-content: space-between;
+  align-items: center;
+}
+h1{
+    margin:0px;
+}
+.right-style{
+    display: inline-block;
+    margin-left: 25px;
+}
+.input{
+    margin-left: 40px;
+    flex:1;
+    border-style: none;
+}
+.input-style{
+    width:95%;
+    padding:7px 0px 7px 10px;
+    font-size: 15px;
+    border-radius: 25px;
+    min-width: 120px;
+    border-style: none;
+}
+</style>
 </head>
 <body>
     <header>
-        <h1 class="title">MOBILE STORE</h1>
-        <h1 class="home">HOME</h1>
-        <h1 class="cart">CART</h1>
+        <div class="title">
+            <h1>MOBILE STORE</h1>
+        </div>
+        <div class="input">
+            <input class="input-style" type="text" placeholder="Search">
+        </div>
+        <div class="right-section">
+            <h1 class="right-style">HOME</h1>
+            <h1 class="right-style">CART</h1>
+        </div>
     </header>
     <div>
         <h1 class="mobile-company">APPLE MOBILES</h1>
@@ -108,6 +150,15 @@ let cart=[];
 let res=``;
 let total=0;
 let remove_button_display=[0,0,0,0,0,0,0,0,0,0];
+function search(){
+    let search_item=document.querySelector(".input-style");
+    for(let i=0;i<model.length;i++){
+        console.log(model[i]===search_item.value);
+        if(model[i]===search_item.value){
+            alert`Model found`;
+        }
+    }
+}
 function add_to_cart(c){
     let cart_update=document.querySelector(".product-cart");
     let remove_button=document.querySelectorAll(".remove-from-cart");
@@ -115,7 +166,8 @@ function add_to_cart(c){
         if(c-1==i){
             remove_button[i].style.display='block';
         }
-    }
+    } 
+    search();
    remove_button_display[c-1]++;
     cart.push(c-1);
     res=``;

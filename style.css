@@ -2,26 +2,16 @@ body{
   background-color: rgba(54, 96, 234, 0.3);
   font-family: montserrat;
 }
-
 header{
+  display: flex;
   margin-top:15px;
   border-style: solid;
   border-width: 1px;
+  color:brown;
   border-radius:6px;
   padding:15px;
   font-family:montserrat,'Times New Roman', Times, serif;
   background-color: rgb(215, 235, 81);
-}
-.title,.home,.cart{
-  color: brown;
-  margin:0px;
-  display: inline-block; 
-}
-.home{
-  margin-left: 950px;
-}
-.cart{
-  margin-left:30px;
 }
 .items{
   display: grid;
@@ -92,6 +82,7 @@ padding:35px 5px 10px 5px;
 }
 .mobile-company{
   color: brown;
+  margin: 15px 0px 18px 00px;
 }
 .img10{
   margin-left: 10px;
