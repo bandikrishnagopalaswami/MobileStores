@@ -27,7 +27,50 @@ header{
   border-radius: 15px;
   border-width: 1px;
 }
-img{
+img{header{
+  display: flex;
+  margin-top:15px;
+  border-style: solid;
+  border-width: 1px;
+  color:brown;
+  padding:10px 5px 10x 0px;
+  border-radius:6px;
+  font-family:montserrat,'Times New Roman', Times, serif;
+  background-color: rgb(215, 235, 81);
+  justify-content: space-between;
+  align-items: center;
+}
+h1{
+    margin:0px;
+}
+@media (max-width: 768px) {
+  .items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.right-style{
+    display: inline-block;
+    margin-left: 25px;
+}
+.input{
+    margin-left: 40px;
+    flex:1;
+    border-style: none;
+}
+.input-style{
+    width:95%;
+    padding:7px 0px 7px 10px;
+    font-size: 15px;
+    border-radius: 25px;
+    min-width: 120px;
+    border-style: none;
+}
   height: 200px;
   margin-left: 60px;
   border-radius:10px;
